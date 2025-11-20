@@ -1,0 +1,7 @@
+macos-titlebar-style = tabs
+font-family = "PleckJP"
+font-size = 16
+theme = "0x96f"
+background = #000000
+background-opacity = 0.8
+background-blur = true
