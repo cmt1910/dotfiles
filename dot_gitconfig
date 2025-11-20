@@ -1,0 +1,11 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !gh auth git-credential
+[user]
+	name = cmt1910
+	email = 88577419+cmt1910@users.noreply.github.com
+[push]
+	autoSetupRemote = true
