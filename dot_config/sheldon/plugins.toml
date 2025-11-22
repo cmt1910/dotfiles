@@ -1,6 +1,17 @@
 shell = "zsh"
 
+# デフォルトを遅延読み込みにする
+apply = ["defer"]
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+apply = ["source"]
+
+[templates]
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+
 [plugins]
 
 [plugins.powerlevel10k]
 github = "romkatv/powerlevel10k"
+apply = ["source"]
