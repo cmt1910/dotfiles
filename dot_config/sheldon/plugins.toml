@@ -15,3 +15,9 @@ defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file 
 [plugins.powerlevel10k]
 github = "romkatv/powerlevel10k"
 apply = ["source"]
+
+[plugins.syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
+
+[plugins.autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
