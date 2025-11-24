@@ -8,7 +8,38 @@ fi
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
+# History
+HISTFILE=$HOME/.zsh_history     # 履歴を保存するファイル
+SAVEHIST=10000                   # 保存する履歴の数
+HISTSIZE=10000                   # メモリ上に保存する履歴のサイズ
+
+# History
+setopt inc_append_history       # 実行時に履歴をファイルに追加していく
+setopt share_history            # 履歴を他のシェルとリアルタイム共有する
+setopt extended_history         # コマンドのタイムスタンプをHISTFILEに記録する
+setopt hist_ignore_dups         # 重複するコマンドが保存されるとき、古い方を削除する
+setopt hist_reduce_blanks       # 履歴の不要な空白を削除する
+
+# Completion
+setopt auto_param_slash         # ディレクトリの補完時に末尾に/を追加する
+setopt mark_dirs                # ファイル名の補完でディレクトリだった場合に/を追加する
+setopt auto_param_keys          # ()を補完する
+setopt auto_menu                # 補完キー連打で順に補完候補を自動で補完
+setopt correct                  # スペルミスを修正する
+setopt interactive_comments     # コマンドラインでも#をコメントにする
+setopt magic_equal_subst        # コマンドライン引数の=以降も補完する
+setopt complete_in_word         # 単語の途中でも補完を行う
+setopt print_eight_bit          # 日本語のファイル名を表示する
+
+# Others
+setopt no_beep                  # ビープ音を鳴らさない
+
+# Sheldon
 eval "$(sheldon source)"
+
+# Compinit
+autoload -Uz compinit
+compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
