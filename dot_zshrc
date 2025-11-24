@@ -8,6 +8,8 @@ fi
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 
+eval "$(mise activate zsh)"
+
 # History
 HISTFILE=$HOME/.zsh_history     # 履歴を保存するファイル
 SAVEHIST=10000                   # 保存する履歴の数
