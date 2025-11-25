@@ -1,0 +1,27 @@
+{
+  "icon_theme": "Material Icon Theme",
+  "buffer_font_size": 14,
+  "theme": {
+    "mode": "dark",
+    "light": "VSCode Dark Modern",
+    "dark": "VSCode Dark Modern"
+  },
+  "buffer_font_family": "PleckJP",
+  "indent_guides": {
+    "enabled": true,
+    "background_coloring": "indent_aware"
+  },
+  "tabs": {
+    "file_icons": true
+  },
+  "tab_bar": {
+    "show": true
+  },
+  "title_bar": {
+    "show_menus": true
+  },
+  "auto_install_extensions": {
+    "vscode-dark-modern": true,
+    "material-icon-theme": true
+  }
+}
