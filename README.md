@@ -1,5 +1,11 @@
 # dotfiles
 
+## OS
+
+- [x] macOS
+- [ ] Linux
+- [ ] Windows
+
 ## Requirements
 
 - [twpayne/chezmoi](https://github.com/twpayne/chezmoi)
