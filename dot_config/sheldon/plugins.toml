@@ -21,3 +21,6 @@ github = "zdharma-continuum/fast-syntax-highlighting"
 
 [plugins.autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
+
+[plugins.autopair]
+github = "hlissner/zsh-autopair"
