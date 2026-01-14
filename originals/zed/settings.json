@@ -11,6 +11,7 @@
     "enabled": true,
     "background_coloring": "indent_aware"
   },
+  "colorize_brackets": true,
   "tabs": {
     "file_icons": true
   },
