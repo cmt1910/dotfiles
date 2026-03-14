@@ -1,6 +1,6 @@
 macos-titlebar-style = tabs
 font-family = "HA-Gothick"
-font-size = 14
+font-size = 13
 theme = "Dark Modern"
 background = #000000
 background-opacity = 0.8
