@@ -6,3 +6,5 @@ background = #000000
 background-opacity = 0.8
 background-blur = true
 cursor-style = bar
+
+keybind = cmd+c=copy_to_clipboard:plain
