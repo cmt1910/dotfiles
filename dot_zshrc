@@ -40,9 +40,29 @@ setopt no_beep                  # ビープ音を鳴らさない
 # Sheldon
 eval "$(sheldon source)"
 
+# Homebrewの補完設定
+if command -v brew >/dev/null 2>&1; then
+  fpath=("$(brew --prefix)/share/zsh/site-functions" $fpath)
+fi
+
 # Compinit
+zmodload zsh/complist
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' list-grouped true
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' verbose true
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
 autoload -Uz compinit
 compinit
+
+# Ctrl-Rの履歴検索でfzfを使用するようにする
+if command -v brew >/dev/null 2>&1 && [[ -f "$(brew --prefix fzf)/shell/key-bindings.zsh" ]]; then
+  source "$(brew --prefix fzf)/shell/key-bindings.zsh"
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
