@@ -5,7 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH="/opt/homebrew/bin:$PATH"
+# Homebrewの設定
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 export PATH="$PATH:${PUB_CACHE:-$HOME/.pub-cache}/bin"
 
@@ -39,11 +43,6 @@ setopt no_beep                  # ビープ音を鳴らさない
 
 # Sheldon
 eval "$(sheldon source)"
-
-# Homebrewの補完設定
-if command -v brew >/dev/null 2>&1; then
-  fpath=("$(brew --prefix)/share/zsh/site-functions" $fpath)
-fi
 
 # Compinit
 zmodload zsh/complist
