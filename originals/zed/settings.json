@@ -1,12 +1,12 @@
 {
   "icon_theme": "Material Icon Theme",
-  "buffer_font_size": 14,
+  "buffer_font_size": 12,
+  "buffer_font_family": "HA-Gothick",
   "theme": {
     "mode": "dark",
     "light": "VSCode Dark Modern",
     "dark": "VSCode Dark Modern",
   },
-  "buffer_font_family": "PleckJP",
   "indent_guides": {
     "enabled": true,
     "background_coloring": "indent_aware",
